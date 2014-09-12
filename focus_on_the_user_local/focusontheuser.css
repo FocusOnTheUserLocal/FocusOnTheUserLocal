@@ -1,0 +1,86 @@
+#gbql, #logo {
+  background-image: url(//focusontheuser.org/dontbeevil/sprite.png) !important;
+}
+
+#logo {
+  background-position: 0 -173px;
+  display: block;
+  height: 45px;
+  text-indent: -1000px;
+  width: 116px;
+}
+
+#logo img {
+  visibility: hidden;
+}
+
+div.dbe_results em {
+  font-weight: normal;
+}
+
+ul.dbe_first li {
+  list-style: none;
+  margin-bottom: 0px;
+}
+
+ul.dbe_first li .spri {
+  display: none;
+}
+
+ul.dbe_first li .dbe_img {
+  border: 1px solid #ebebeb;
+  float: left;
+  height: 46px;
+  margin-right: 5px;
+  width: 46px;
+}
+
+ul.dbe_first li h3 {
+  display: inline-block;
+  padding: 2px 0;
+}
+
+ul.dbe_first li h3 a {
+  background: transparent !important;
+  font: 10pt arial,sans-serif;
+  padding-right: 6px;
+  text-decoration: none;
+}
+
+ul.dbe_first li h3 span {
+  color: #666;
+  font: normal 10pt arial,sans-serif;
+}
+
+ul.dbe_first li h3 a,
+ul.dbe_first li h3 em {
+  font-weight: bold;
+}
+
+ul.dbe_first li cite b {
+  font-weight: normal;
+}
+
+div.dbe_button {
+  display: inline;
+  float: right;
+  max-width: 100px;
+  height: 0;
+}
+
+div.dbe_extra {
+  margin-top: 5px;
+}
+
+.dbe_stats {
+  background: #fea;
+}
+
+div.dbe_extra a {
+  font: 10pt arial,sans-serif;
+  text-decoration: none;
+}
+
+.pplic {
+  display: none;
+}

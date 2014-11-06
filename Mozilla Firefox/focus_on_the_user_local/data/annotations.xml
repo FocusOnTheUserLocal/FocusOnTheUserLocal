@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Annotations start="0" num="37" total="37">
+  <Annotation about="zocdoc.com/doctor*" timestamp="0x0004fef068a392b7" href="ChJ6b2Nkb2MuY29tL2RvY3RvcioQt6WOxYbevwI">
+    <Label name="_cse_pt-ex0x0afq" />
+    <AdditionalData attribute="original_url" value="zocdoc.com/doctor" />
+  </Annotation>
+  <Annotation about="tripadvisor.com/Restaurant_Review*" timestamp="0x0004fef068a392ad" href="CiJ0cmlwYWR2aXNvci5jb20vUmVzdGF1cmFudF9SZXZpZXcqEK2ljsWG3r8C">
+    <Label name="_cse_pt-ex0x0afq" />
+    <AdditionalData attribute="original_url" value="tripadvisor.com/Restaurant_Review" />
+  </Annotation>
+  <Annotation about="tripadvisor.com/Hotel_Review*" timestamp="0x0004fef068a392a5" href="Ch10cmlwYWR2aXNvci5jb20vSG90ZWxfUmV2aWV3KhClpY7Fht6_Ag">
+    <Label name="_cse_pt-ex0x0afq" />
+    <AdditionalData attribute="original_url" value="tripadvisor.com/Hotel_Review" />
+  </Annotation>
+  <Annotation about="*.mojopages.com/*" timestamp="0x0004fef068a3929d" href="ChEqLm1vam9wYWdlcy5jb20vKhCdpY7Fht6_Ag">
+    <Label name="_cse_pt-ex0x0afq" />
+    <AdditionalData attribute="original_url" value="mojopages.com" />
+  </Annotation>
+  <Annotation about="yelp.co.uk/biz*" timestamp="0x0004fef068a39295" href="Cg95ZWxwLmNvLnVrL2JpeioQlaWOxYbevwI">
+    <Label name="_cse_pt-ex0x0afq" />
+    <AdditionalData attribute="original_url" value="yelp.co.uk/biz" />
+  </Annotation>
+  <Annotation about="yelp.ie/biz*" timestamp="0x0004fef068a39268" href="Cgx5ZWxwLmllL2JpeioQ6KSOxYbevwI">
+    <Label name="_cse_pt-ex0x0afq" />
+    <AdditionalData attribute="original_url" value="yelp.ie/biz" />
+  </Annotation>
+  <Annotation about="yelp.com/biz*" timestamp="0x0004fef068a3925f" href="Cg15ZWxwLmNvbS9iaXoqEN-kjsWG3r8C">
+    <Label name="_cse_pt-ex0x0afq" />
+    <AdditionalData attribute="original_url" value="yelp.com/biz" />
+  </Annotation>
+  <Annotation about="*.merchantcircle.com/*" timestamp="0x0004fef068a39255" href="ChYqLm1lcmNoYW50Y2lyY2xlLmNvbS8qENWkjsWG3r8C">
+    <Label name="_cse_pt-ex0x0afq" />
+    <AdditionalData attribute="original_url" value="merchantcircle.com" />
+  </Annotation>
+  <Annotation about="*.superpages.com/*" timestamp="0x0004fef068a39247" href="ChIqLnN1cGVycGFnZXMuY29tLyoQx6SOxYbevwI">
+    <Label name="_cse_pt-ex0x0afq" />
+    <AdditionalData attribute="original_url" value="superpages.com" />
+  </Annotation>
+  <Annotation about="*.judysbook.com/*" timestamp="0x0004fef068a3923d" href="ChEqLmp1ZHlzYm9vay5jb20vKhC9pI7Fht6_Ag">
+    <Label name="_cse_pt-ex0x0afq" />
+    <AdditionalData attribute="original_url" value="judysbook.com" />
+  </Annotation>
+  <Annotation about="*.citysearch.com/*" timestamp="0x0004fef068a39233" href="ChIqLmNpdHlzZWFyY2guY29tLyoQs6SOxYbevwI">
+    <Label name="_cse_pt-ex0x0afq" />
+    <AdditionalData attribute="original_url" value="citysearch.com" />
+  </Annotation>
+  <Annotation about="urbanspoon.com/r*" timestamp="0x0004fef068a39226" href="ChF1cmJhbnNwb29uLmNvbS9yKhCmpI7Fht6_Ag">
+    <Label name="_cse_pt-ex0x0afq" />
+    <AdditionalData attribute="original_url" value="urbanspoon.com/r" />
+  </Annotation>
+  <Annotation about="*.switchboard.com/*" timestamp="0x0004fef068a39217" href="ChMqLnN3aXRjaGJvYXJkLmNvbS8qEJekjsWG3r8C">
+    <Label name="_cse_pt-ex0x0afq" />
+    <AdditionalData attribute="original_url" value="switchboard.com" />
+  </Annotation>
+  <Annotation about="*.spafinder.com/*" timestamp="0x0004fef068a3920b" href="ChEqLnNwYWZpbmRlci5jb20vKhCLpI7Fht6_Ag">
+    <Label name="_cse_pt-ex0x0afq" />
+    <AdditionalData attribute="original_url" value="spafinder.com" />
+  </Annotation>
+  <Annotation about="*.dexknows.com/*" timestamp="0x0004fef068a391ff" href="ChAqLmRleGtub3dzLmNvbS8qEP-jjsWG3r8C">
+    <Label name="_cse_pt-ex0x0afq" />
+    <AdditionalData attribute="original_url" value="dexknows.com" />
+  </Annotation>
+  <Annotation about="healthgrades.com/physician*" timestamp="0x0004fef068a391f2" href="ChtoZWFsdGhncmFkZXMuY29tL3BoeXNpY2lhbioQ8qOOxYbevwI">
+    <Label name="_cse_pt-ex0x0afq" />
+    <AdditionalData attribute="original_url" value="healthgrades.com/physician" />
+  </Annotation>
+  <Annotation about="*.yellowpages.com/*" timestamp="0x0004fef068a391e0" href="ChMqLnllbGxvd3BhZ2VzLmNvbS8qEOCjjsWG3r8C">
+    <Label name="_cse_pt-ex0x0afq" />
+    <AdditionalData attribute="original_url" value="yellowpages.com" />
+  </Annotation>
+  <Annotation about="*.kudzu.com/*" timestamp="0x0004fef068a391d3" href="Cg0qLmt1ZHp1LmNvbS8qENOjjsWG3r8C">
+    <Label name="_cse_pt-ex0x0afq" />
+    <AdditionalData attribute="original_url" value="kudzu.com" />
+  </Annotation>
+  <Annotation about="*.cityvoter.com/*" timestamp="0x0004fef068a391c7" href="ChEqLmNpdHl2b3Rlci5jb20vKhDHo47Fht6_Ag">
+    <Label name="_cse_pt-ex0x0afq" />
+    <AdditionalData attribute="original_url" value="cityvoter.com" />
+  </Annotation>
+  <Annotation about="*.giftly.com/*" timestamp="0x0004fef068a391b8" href="Cg4qLmdpZnRseS5jb20vKhC4o47Fht6_Ag">
+    <Label name="_cse_pt-ex0x0afq" />
+    <AdditionalData attribute="original_url" value="giftly.com" />
+  </Annotation>
+  <Annotation about="*.dailycandy.com/*" timestamp="0x0004fef068a391a5" href="ChIqLmRhaWx5Y2FuZHkuY29tLyoQpaOOxYbevwI">
+    <Label name="_cse_pt-ex0x0afq" />
+    <AdditionalData attribute="original_url" value="dailycandy.com" />
+  </Annotation>
+  <Annotation about="menupages.com/restaurants/all-cuisines*" timestamp="0x0004fef068a39197" href="CidtZW51cGFnZXMuY29tL3Jlc3RhdXJhbnRzL2FsbC1jdWlzaW5lcyoQl6OOxYbevwI">
+    <Label name="_cse_pt-ex0x0afq" />
+    <AdditionalData attribute="original_url" value="menupages.com/restaurants/all-cuisines" />
+  </Annotation>
+  <Annotation about="*.doctoroogle.com/*" timestamp="0x0004fef068a39188" href="ChMqLmRvY3Rvcm9vZ2xlLmNvbS8qEIijjsWG3r8C">
+    <Label name="_cse_pt-ex0x0afq" />
+    <AdditionalData attribute="original_url" value="doctoroogle.com" />
+  </Annotation>
+  <Annotation about="*.webmd.com/*" timestamp="0x0004fef068a3917c" href="Cg0qLndlYm1kLmNvbS8qEPyijsWG3r8C">
+    <Label name="_cse_pt-ex0x0afq" />
+    <AdditionalData attribute="original_url" value="webmd.com" />
+  </Annotation>
+  <Annotation about="*.insiderpages.com/*" timestamp="0x0004fef068a39172" href="ChQqLmluc2lkZXJwYWdlcy5jb20vKhDyoo7Fht6_Ag">
+    <Label name="_cse_pt-ex0x0afq" />
+    <AdditionalData attribute="original_url" value="insiderpages.com" />
+  </Annotation>
+  <Annotation about="*.intuit.com/*" timestamp="0x0004fef068a3916b" href="Cg4qLmludHVpdC5jb20vKhDroo7Fht6_Ag">
+    <Label name="_cse_pt-ex0x0afq" />
+    <AdditionalData attribute="original_url" value="intuit.com" />
+  </Annotation>
+  <Annotation about="vitals.com/doctors*" timestamp="0x0004fef068a39163" href="ChN2aXRhbHMuY29tL2RvY3RvcnMqEOOijsWG3r8C">
+    <Label name="_cse_pt-ex0x0afq" />
+    <AdditionalData attribute="original_url" value="vitals.com/doctors" />
+  </Annotation>
+  <Annotation about="*.restaurant.com/*" timestamp="0x0004fef068a39153" href="ChIqLnJlc3RhdXJhbnQuY29tLyoQ06KOxYbevwI">
+    <Label name="_cse_pt-ex0x0afq" />
+    <AdditionalData attribute="original_url" value="restaurant.com" />
+  </Annotation>
+  <Annotation about="*.lonelyplanet.com/*" timestamp="0x0004fef068a3914b" href="ChQqLmxvbmVseXBsYW5ldC5jb20vKhDLoo7Fht6_Ag">
+    <Label name="_cse_pt-ex0x0afq" />
+    <AdditionalData attribute="original_url" value="lonelyplanet.com" />
+  </Annotation>
+  <Annotation about="*.metromix.com/*" timestamp="0x0004fef068a39143" href="ChAqLm1ldHJvbWl4LmNvbS8qEMOijsWG3r8C">
+    <Label name="_cse_pt-ex0x0afq" />
+    <AdditionalData attribute="original_url" value="metromix.com" />
+  </Annotation>
+  <Annotation about="*.ratemds.com/*" timestamp="0x0004fef068a3913c" href="Cg8qLnJhdGVtZHMuY29tLyoQvKKOxYbevwI">
+    <Label name="_cse_pt-ex0x0afq" />
+    <AdditionalData attribute="original_url" value="ratemds.com" />
+  </Annotation>
+  <Annotation about="*.grubhub.com/*" timestamp="0x0004fef068a39135" href="Cg8qLmdydWJodWIuY29tLyoQtaKOxYbevwI">
+    <Label name="_cse_pt-ex0x0afq" />
+    <AdditionalData attribute="original_url" value="grubhub.com" />
+  </Annotation>
+  <Annotation about="*.opentable.com/*" timestamp="0x0004fef068a3912e" href="ChEqLm9wZW50YWJsZS5jb20vKhCuoo7Fht6_Ag">
+    <Label name="_cse_pt-ex0x0afq" />
+    <AdditionalData attribute="original_url" value="opentable.com" />
+  </Annotation>
+  <Annotation about="*.zagat.com/*" timestamp="0x0004fef068a39124" href="Cg0qLnphZ2F0LmNvbS8qEKSijsWG3r8C">
+    <Label name="_cse_pt-ex0x0afq" />
+    <AdditionalData attribute="original_url" value="zagat.com" />
+  </Annotation>
+  <Annotation about="*.seamless.com/*" timestamp="0x0004fef068a3911b" href="ChAqLnNlYW1sZXNzLmNvbS8qEJuijsWG3r8C">
+    <Label name="_cse_pt-ex0x0afq" />
+    <AdditionalData attribute="original_url" value="seamless.com" />
+  </Annotation>
+  <Annotation about="*.1800dentist.com/*" timestamp="0x0004fef068a3910c" href="ChMqLjE4MDBkZW50aXN0LmNvbS8qEIyijsWG3r8C">
+    <Label name="_cse_pt-ex0x0afq" />
+    <AdditionalData attribute="original_url" value="1800dentist.com" />
+  </Annotation>
+  <Annotation about="plus.google.com/*" timestamp="0x0004fef0641ae9e2" href="ChFwbHVzLmdvb2dsZS5jb20vKhDi0-ught6_Ag">
+    <Label name="_cse_pt-ex0x0afq" />
+    <AdditionalData attribute="original_url" value="plus.google.com" />
+  </Annotation>
+</Annotations>

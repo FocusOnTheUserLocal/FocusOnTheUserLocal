@@ -32,8 +32,9 @@ function load_script(uri) {
                  //' type="text/javascript"><' + '/script>');
 //}
 
-load_script("//maps.googleapis.com/maps/api/js?v=3.exp&sensor=true&" +
-    "libraries=places&callback=fl_initialize");
-load_script("//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js");
+console.log("yelp extension");
 load_script(chrome.extension.getURL("maps_places_util.js"));
 load_script(chrome.extension.getURL("fairlocal.js"));
+load_script("//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js");
+load_script("//maps.googleapis.com/maps/api/js?v=3.exp&sensor=true&" +
+    "libraries=places&callback=fl_initialize");

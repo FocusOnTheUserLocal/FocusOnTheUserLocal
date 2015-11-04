@@ -89,15 +89,17 @@ function init_map(geo_loc) {
 var add_marker = function(loc, letter, info_content) {
   var marker = new _gmaps.Marker({
     map: new_map,
-    icon: 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=' + letter + '|f47266|000000',
+    icon: '//storage.googleapis.com/support-kms-prod/SNP_2752125_en_v0',
     position: loc
   });
   map_markers.push(marker);
 
+  /*
   _gmaps.event.addListener(marker, 'click', function() {
     infowindow.setContent(info_content);
     infowindow.open(new_map, this);
   });
+  */
 }
 
 function setMapLocation(address, success_callback, failure_callback) {

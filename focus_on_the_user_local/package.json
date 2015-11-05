@@ -1,0 +1,16 @@
+{
+  "title": "Focus on the User - Local",
+  "name": "focusontheuserlocal",
+  "version": "1.0.0",
+  "description": "Focs on the User Local",
+  "main": "index.js",
+  "author": "",
+  "engines": {
+    "firefox": ">=38.0a1",
+    "fennec": ">=38.0a1"
+  },
+  "license": "MIT",
+  "keywords": [
+    "jetpack"
+  ]
+}

@@ -1,6 +1,8 @@
 function fl_initialize() {
 
 
+    console.log('fl_initialize');
+
     // Various regexes
     var configs = {
         // General, page-wide configs
@@ -583,3 +585,6 @@ function fl_initialize() {
 
     main();
 }
+
+console.log('fairlocal');
+

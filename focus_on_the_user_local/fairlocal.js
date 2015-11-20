@@ -496,8 +496,6 @@ function fl_initialize() {
                     }
                 }
 
-                console.log('raw result', res);
-
                 var formattedResult = {
                     host: res.visibleUrl,
                     rating: parseFloat(rating),
@@ -512,7 +510,7 @@ function fl_initialize() {
                     visible_url: res.visibleUrl,
                     reviews: 'REVIEWS',
                 };
-                console.log('raw result 2', formattedResult.rating, formattedResult.review_count, formattedResult.image);
+
                 formattedResults.push(formattedResult);
                 if (host_to_site.hasOwnProperty(res.visibleUrl)) {
                     host_to_site[res.visibleUrl] += 1;

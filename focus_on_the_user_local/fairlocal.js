@@ -466,7 +466,14 @@ function fl_initialize() {
 
                 if ( typeof res.richSnippet !== 'undefined' ) {
                     if ( typeof res.richSnippet.aggregaterating !== 'undefined' ) {
-                        review_count = res.richSnippet.aggregaterating.reviewcount || 0;
+                        if (res.richSnippet.aggregaterating.reviewcount) {
+                            review_count = res.richSnippet.aggregaterating.reviewcount;
+                        }  else if (res.richSnippet.aggregaterating.ratingcount) {
+                            review_count = res.richSnippet.aggregaterating.ratingcount;
+                        } else {
+                            review_count = 0;
+                        }
+
                         rating = res.richSnippet.aggregaterating.ratingvalue || 0;
                     } else if ( typeof res.richSnippet.review !== 'undefined' ) {
                         review_count = res.richSnippet.review.ratingcount || 0;
@@ -479,10 +486,22 @@ function fl_initialize() {
                     return;
                 }
 
+                var image = null;
+
+                if (res.richSnippet) {
+                    if (res.richSnippet.cseThumbnail && res.richSnippet.cseThumbnail.src) {
+                        image = res.richSnippet.cseThumbnail.src;
+                    } else if (res.richSnippet.cseImage && res.richSnippet.cseImage.src) {
+                        image = res.richSnippet.cseImage.src
+                    }
+                }
+
+                console.log('raw result', res);
+
                 var formattedResult = {
                     host: res.visibleUrl,
                     rating: parseFloat(rating),
-                    image: res.richSnippet ? (res.richSnippet.cseThumbnail ? res.richSnippet.cseThumbnail.src : null) : null,
+                    image: image, 
                     site_name: hostNameToSiteName(res.visibleUrl),
                     review_count: parseFloat(review_count),
                     title: res.titleNoFormatting, // use res.titleNoFormatting if we don't want formatting
@@ -493,6 +512,7 @@ function fl_initialize() {
                     visible_url: res.visibleUrl,
                     reviews: 'REVIEWS',
                 };
+                console.log('raw result 2', formattedResult.rating, formattedResult.review_count, formattedResult.image);
                 formattedResults.push(formattedResult);
                 if (host_to_site.hasOwnProperty(res.visibleUrl)) {
                     host_to_site[res.visibleUrl] += 1;

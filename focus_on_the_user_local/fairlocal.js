@@ -11,20 +11,21 @@ function fl_initialize() {
         localResults: '._oL > div', // Each local row row
         resultLink: 'a[role="link"].rllt__link', // The result link (anything left of the website/directions buttons)
         resultTitle: 'div._rl', // The result title/name
-        resultReviews: '._mfe', // The result reviews line (e.g. "4.3 <stars> 12 reviews")
+        resultReviews: '.rllt__details:first>div:first', // The result reviews line (e.g. "4.3 <stars> 12 reviews")
         resultNoReviews: '._Juh', // The result reviews line when there are no reviews (where it says "No reviews")
         resultDirectionsButton: '.rllt__directions-button', // Results directions button
         resultClassification: '._tf', // Result classification (e.g. "barbershop") and distance information
-        resultOpeningTimes: '.rllt__qs-status', // Result opening times
-        resultVisitWebsite: '._cGe', // Result 'visit website' link
+        resultOpeningTimes: 'div.rllt__details', // Result opening times
+        resultVisitWebsite: '.rllt__action-button._Jrh', // Result 'visit website' link
         resultImage: '._li', // Result image (container)
         resultPrice: '._Nl', // Result price
         resultProperties: '._Yig', // Result properties (e.g. free breakfast)
         resultRestaurantProperties: '._it', // Result restaurant-specific properties (e.g. Zagat rated)
+        resultRestaurantDescription: '.rllt__details>div>span[data-ved]', // Result restaurant-specific textual description
         resultWebsiteButton: '._Jrh', // Result website icon
         resultZaggatRating: '._Dwh', // Result zaggat rating line
         resultHotelProperties: '._WQg', // Result hotel properties (e.g. "Free Wi-Fi")
-        resultAddress: '._swf', // Result exact address
+        resultAddress: '.rllt__details:first>div:nth-child(3)', // Result exact address
 
         moreResultsLink: 'a._B3g', // The link part (a href) that says "More barbershops" etc.
 
@@ -314,6 +315,8 @@ function fl_initialize() {
                 }
                 // Remove restaurant properties
                 $(this).find(configs.resultRestaurantProperties).remove();
+                // Remove restaurant description
+                $(this).find(configs.resultRestaurantDescription).remove();
                 // Remove hotel price
                 $(this).find(configs.resultPrice).remove();
                 // Remove hotel properties (e.g. free breakfast)

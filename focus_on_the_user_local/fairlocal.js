@@ -8,17 +8,17 @@ function fl_initialize() {
         googleSearchUrl: "https://www.google.com/search?q=", // The full url for performing a google query
 
         // Local per-result configs (appear for each local result)
-        localResults: '._oL > div', // Each local row row
+        localResults: '._M4k > div', // Each local row row
         resultLink: 'a[role="link"].rllt__link', // The result link (anything left of the website/directions buttons)
         resultTitle: 'div._rl', // The result title/name
         resultReviews: '.rllt__details:first>div:first', // The result reviews line (e.g. "4.3 <stars> 12 reviews")
         resultNoReviews: '._Juh', // The result reviews line when there are no reviews (where it says "No reviews")
         resultDirectionsButton: '.rllt__directions-button', // Results directions button
         resultClassification: '._tf', // Result classification (e.g. "barbershop") and distance information
-        resultOpeningTimes: 'div.rllt__details', // Result opening times
+        resultOpeningTimes: 'div.rllt__wrapped', // Result opening times
         resultVisitWebsite: '.rllt__action-button._Jrh', // Result 'visit website' link
         resultImage: '._li', // Result image (container)
-        resultPrice: '._Nl', // Result price
+        resultPrice: '._JRk', // Result price
         resultProperties: '._Yig', // Result properties (e.g. free breakfast)
         resultRestaurantProperties: '._it', // Result restaurant-specific properties (e.g. Zagat rated)
         resultRestaurantDescription: '.rllt__details>div>span[data-ved]', // Result restaurant-specific textual description
@@ -31,7 +31,7 @@ function fl_initialize() {
 
         // General local results configs (appear once in page)
         restaurantFilters: '._KPf', // Restaurant filters (e.g. by price, rating)
-        hotelFilters: '._kZ', // Hotel filters (e.g. by price, rating)
+        hotelFilters: '._AOd', // Hotel filters (e.g. by price, rating)
         resultsMap: '#lu_map', // The map that displays the original results
 
         // Mapping between result domain URL to site name
@@ -159,6 +159,7 @@ function fl_initialize() {
         }
         function failedGeoLocate() {
             console.log("Failed geo-location");
+            $(configs.resultsMap).hide();
             dropResultsInPlace2(new_results, top_hosts);
         }
         console.log('getLocationString', getLocationString());

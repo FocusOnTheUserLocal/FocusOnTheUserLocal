@@ -126,8 +126,10 @@ function fl_initialize() {
     };
     var switchToFairLocal = function() {
         switchAllTo('organic_result', 'original_result');
-        $(configs.resultsMap).hide();
-        $('#new_map').show();
+        if (map_geo_loc != null) {
+            $(configs.resultsMap).hide();
+            $('#new_map').show();
+        }
         return false;
     };
 
@@ -159,7 +161,6 @@ function fl_initialize() {
         }
         function failedGeoLocate() {
             console.log("Failed geo-location");
-            $(configs.resultsMap).hide();
             dropResultsInPlace2(new_results, top_hosts);
         }
         console.log('getLocationString', getLocationString());
@@ -198,8 +199,10 @@ function fl_initialize() {
                     })
                     );
                     menuFormatting(this);
-                    $(configs.resultsMap).hide();
-                    $('#new_map').show();
+                    if (map_geo_loc != null) {
+                        $(configs.resultsMap).hide();
+                        $('#new_map').show();
+                    }
 
 
                     var googleQuery = $(configs.googleQuery).first().val();
@@ -326,6 +329,9 @@ function fl_initialize() {
                 $(document).find(configs.restaurantFilters).hide();
                 // Hide hotel filters
                 $(document).find(configs.hotelFilters).hide();
+                // Remove map link
+                $(configs.resultsMap).parent().click(function() { return false; });
+                $(configs.resultsMap).parent().css('cursor', 'default');
 
                 var loc_box = $(this).find(configs.resultDirectionsButton);
                 set_location_url = function(text) {

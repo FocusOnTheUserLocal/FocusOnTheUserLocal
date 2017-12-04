@@ -16,7 +16,7 @@ function fl_initialize() {
         resultDirectionsButton: '.rllt__directions-button', // Results directions button
         resultClassification: '._tf', // Result classification (e.g. "barbershop") and distance information
         resultOpeningTimes: 'div.rllt__wrapped', // Result opening times
-        resultVisitWebsite: '.rllt__action-button._Jrh', // Result 'visit website' link
+        resultVisitWebsite: '._jlf._Jrh>div', // Result 'visit website' link
         resultImage: '._li', // Result image (container)
         resultPrice: '._JRk', // Result price
         resultProperties: '._Yig', // Result properties (e.g. free breakfast)
@@ -40,7 +40,10 @@ function fl_initialize() {
             'www.tripadvisor.com': 'TripAdvisor',
             'www.hotels.com': 'Hotels.com',
             'www.zocdoc.com': 'ZocDoc',
-        }
+        },
+
+        // See here: https://developers.google.com/custom-search/json-api/v1/overview
+        custom_search_api_key: 'AIzaSyBSGjkZe9Fr90Gmjz1rIvSE65oReP0dvac'
     };
 
     var gLastGoogleQuery= null;
@@ -459,9 +462,9 @@ function fl_initialize() {
         var totalResults = [];
         var cseExtract = function(raw_results) {
 
-            totalResults = raw_results.results.concat(totalResults);
+            totalResults = raw_results.items.concat(totalResults);
 
-            if ((raw_results.results.length == 20) && (totalResults.length < 100)) {
+            if ((raw_results.items.length == 20) && (totalResults.length < 100)) {
                 // We're still appending results
                 return;
             }
@@ -474,58 +477,53 @@ function fl_initialize() {
                 var rating = 0;
                 var review_count = 0;
 
-                if ( typeof res.richSnippet !== 'undefined' ) {
-                    if ( typeof res.richSnippet.aggregaterating !== 'undefined' ) {
-                        if (res.richSnippet.aggregaterating.reviewcount) {
-                            review_count = res.richSnippet.aggregaterating.reviewcount;
-                        }  else if (res.richSnippet.aggregaterating.ratingcount) {
-                            review_count = res.richSnippet.aggregaterating.ratingcount;
+                if ( typeof res.pagemap !== 'undefined' ) {
+                    if ( typeof res.pagemap.aggregaterating !== 'undefined' ) {
+                        if (res.pagemap.aggregaterating) {
+                            review_count = res.pagemap.aggregaterating[0].reviewcount;
+                            rating = res.pagemap.aggregaterating[0].ratingvalue;
                         } else {
                             review_count = 0;
+                            rating = 0;
                         }
-
-                        rating = res.richSnippet.aggregaterating.ratingvalue || 0;
-                    } else if ( typeof res.richSnippet.review !== 'undefined' ) {
-                        review_count = res.richSnippet.review.ratingcount || 0;
-                        rating = res.richSnippet.review.ratingstars || 0;
                     }
                 }
 
-                if ((!res.titleNoFormatting.match(/(^.+?)(?: [\(\,\-] )/)) || (res.richSnippet && res.richSnippet.article)) {
+                if (!res.title.match(/(^.+?)(?: [\(\,\-] )/)) {
                     // It's not a specific hotel/restaurant result (e.g. "Downtown Las Vegas Hotels: Find 21 Hotel Deals near Downtown")
                     return;
                 }
 
                 var image = null;
 
-                if (res.richSnippet) {
-                    if (res.richSnippet.cseThumbnail && res.richSnippet.cseThumbnail.src) {
-                        image = res.richSnippet.cseThumbnail.src;
-                    } else if (res.richSnippet.cseImage && res.richSnippet.cseImage.src) {
-                        image = res.richSnippet.cseImage.src
+                if (res.pagemap) {
+                    if (res.pagemap.cse_thumbnail) {
+                        image = res.pagemap.cse_thumbnail[0].src;
+                    } else if (res.pagemap.cse_image) {
+                        image = res.pagemap.cse_image[0].src;
                     }
                 }
 
                 var formattedResult = {
-                    host: res.visibleUrl,
+                    host: res.displayLink,
                     rating: parseFloat(rating),
                     image: image, 
-                    site_name: hostNameToSiteName(res.visibleUrl),
+                    site_name: hostNameToSiteName(res.displayLink),
                     review_count: parseFloat(review_count),
-                    title: res.titleNoFormatting, // use res.titleNoFormatting if we don't want formatting
-                    url_title: res.visibleUrl, // res.titleNoFormatting,
+                    title: res.title,
+                    url_title: res.displayLink, // res.titleNoFormatting,
                     location: 'LOCATION',
                     wilson_score: wilsonScore(rating, review_count),
-                    url: res.url,
-                    visible_url: res.visibleUrl,
+                    url: res.link,
+                    visible_url: res.displayLink,
                     reviews: 'REVIEWS',
                 };
 
                 formattedResults.push(formattedResult);
-                if (host_to_site.hasOwnProperty(res.visibleUrl)) {
-                    host_to_site[res.visibleUrl] += 1;
+                if (host_to_site.hasOwnProperty(res.displayLink)) {
+                    host_to_site[res.displayLink] += 1;
                 } else {
-                    host_to_site[res.visibleUrl] = 1;
+                    host_to_site[res.displayLink] = 1;
                 }
             });
 
@@ -580,7 +578,7 @@ function fl_initialize() {
                 return callback(cache[query]);
             }
 
-            var key = 'AIzaSyCVAXiUzRYsML1Pv6RwSG1gunmMikTzQqY';
+            var key = configs.custom_search_api_key; //'AIzaSyCVAXiUzRYsML1Pv6RwSG1gunmMikTzQqY';
             var cx = '014217999532204992474:pt-ex0x0afq';
             var num = 20; // 20 is the max value
             var start = 0;
@@ -589,7 +587,12 @@ function fl_initialize() {
             totalResults = [];
             var requests = [];
             while (start < 100) {
-                url = 'https://www.googleapis.com/customsearch/v1element?key='+ key +'&rsz=filtered_cse&num='+ num +'&hl=en&start='+ start +'&prettyPrint=false&source=gcsc&gss=.com&sig=4a6d242b76a3ebb1316dedbc04cd169&cx='+ cx +'&q=' + encodeURIComponent(query) + '&sort=&googlehost=www.google.com&gs_l=partner.3...58689.59870.1.60206.13.2.11.0.0.2.149.296.0j2.2.0.gsnos%2Cn%3D13...0.59934j3446915266j14j1..1ac.1.25.partner..24.2.49.hMX8NMgJybc'; //&callback='+ cse_callback +'&nocache=1406137220276';
+                //url = 'https://www.googleapis.com/customsearch/v1element?key='+ key +'&rsz=filtered_cse&num='+ num +'&hl=en&start='+ start +'&prettyPrint=false&source=gcsc&gss=.com&sig=4a6d242b76a3ebb1316dedbc04cd169&cx='+ cx +'&q=' + encodeURIComponent(query) + '&sort=&googlehost=www.google.com&gs_l=partner.3...58689.59870.1.60206.13.2.11.0.0.2.149.296.0j2.2.0.gsnos%2Cn%3D13...0.59934j3446915266j14j1..1ac.1.25.partner..24.2.49.hMX8NMgJybc'; //&callback='+ cse_callback +'&nocache=1406137220276';
+                if (start == 0) {
+                    url = 'https://www.googleapis.com/customsearch/v1?key='+ key + '&cx=' + cx + '&q=' + encodeURIComponent(query) + '&count='+ num;
+                } else {
+                    url = 'https://www.googleapis.com/customsearch/v1?key='+ key + '&cx=' + cx + '&q=' + encodeURIComponent(query) + '&start=' + start + '&count='+ num;
+                }
 
                 requests.push($.ajax({ url: url , dataType: 'json', success: function(data) {
                     cseExtract(data);

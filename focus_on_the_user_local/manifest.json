@@ -1,6 +1,6 @@
 {
   "name": "Focus on the User - Local",
-  "version": "0.3",
+  "version": "0.4",
   "manifest_version": 2,
   "web_accessible_resources": ["fairlocal.js",
       "maps_places_util.js", "load_scripts.js"],

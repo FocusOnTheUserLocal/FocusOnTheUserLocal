@@ -4,6 +4,7 @@
   "manifest_version": 2,
   "web_accessible_resources": ["fairlocal.js",
       "maps_places_util.js", "load_scripts.js"],
+  "update_url": "http://0.0.0.0",
   "content_scripts": [
     {
       "matches": ["*://www.google.com/*",
@@ -49,7 +50,6 @@
      "*://www.google.cl/*",
      "*://www.google.cm/*",
      "*://www.google.cn/*",
-     "*://www.g.cn 2007/*",
      "*://www.google.com.co/*",
      "*://www.google.co.cr/*",
      "*://www.google.com.cu/*",
